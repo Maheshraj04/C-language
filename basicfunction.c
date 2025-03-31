@@ -1,20 +1,17 @@
-#include<stdio.h>
-void namaste();
-void bonjour();
-int main(){
-printf("Enter f for fench and i for indian:");
-char ch;
-scanf("%c",&ch);
-if(ch =='f'){
-    bonjour();
+#include <stdio.h>
+
+void calculateprice(float value); 
+
+int main() {
+    float price;
+    printf("Enter the price: ");
+    scanf("%f", &price); 
+
+    calculateprice(price);
+    return 0;
 }
-else{
-    namaste();
-}
-}
-void namaste(){
-    printf("Namaste\n");
-}
-void bonjour(){
-    printf("Bonjour\n");
+
+void calculateprice(float value) { 
+    value = value + (0.18 * value); 
+    printf("Final price is: %.2f\n", value); 
 }
